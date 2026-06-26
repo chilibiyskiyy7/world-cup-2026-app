@@ -119,7 +119,7 @@
                     div.className = "match-item";
                     const date = new Date(match.utcDate);
                     
-                    div.textContent = `${date.toLocaleString()} — ${match.home} vs ${match.away}`;
+                    div.textContent = `${date.toLocaleString()} — ${match.homeTeam?.name || 'TBD'} vs ${match.awayTeam?.name || 'TBD'}`;
                     container.appendChild(div);
                 });
             } catch (err) {
